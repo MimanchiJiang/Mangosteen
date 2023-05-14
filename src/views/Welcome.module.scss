@@ -2,16 +2,21 @@
 height: 100vh;
 display: flex;
 flex-direction: column;
-
+background: rgb(255,248,134);
+background: linear-gradient(to top, rgba(255,248,134,0.7) 50%, rgba(255,248,134,1) 100%);
 >header{
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-top: 66px;
+    color: #8d8528fd;
 }
 >main{
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 >footer{
     border: 1px solid red;

@@ -1,0 +1,39 @@
+.wrapper{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    >.card{
+        background-color: var(--welcome-card-bg);
+        border-radius: 8px;
+        padding: 16px;
+        margin: 16px 16px 0 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex:1;
+        display: flex;
+        flex-direction: column;
+        >.span{
+            padding-top: 16px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bolder;
+        }
+    }
+    >.action{
+        color: var(--welcome-text);
+        font-size: 24px;
+        font-weight: bolder;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 16px;
+        padding: 24px 0;
+        >.fake{
+            visibility: hidden;
+        }
+
+    }
+}
+
