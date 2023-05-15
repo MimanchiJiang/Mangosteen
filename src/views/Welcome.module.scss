@@ -1,9 +1,10 @@
 .wrapper{
-height: 100vh;
+height: calc(100vh - var(--welcome-nav-height));
 display: flex;
 flex-direction: column;
 background: rgb(255,248,134);
-background: linear-gradient(to top, rgba(255,248,134,0.7) 50%, rgba(255,248,134,1) 100%);
+background: linear-gradient(to top, var(--welcome-bg-end) 50%, var(--welcome-bg-start) 100%);
+margin-bottom: var(--welcome-nav-height);
 >header{
     flex-shrink: 0;
     display: flex;
@@ -11,7 +12,10 @@ background: linear-gradient(to top, rgba(255,248,134,0.7) 50%, rgba(255,248,134,
     align-items: center;
     justify-content: center;
     padding-top: 66px;
-    color: #8d8528fd;
+    color: var(--welcome-text);
+    >h1{
+        font-weight: bolder;
+    }
 }
 >main{
     flex: 1;
@@ -19,7 +23,6 @@ background: linear-gradient(to top, rgba(255,248,134,0.7) 50%, rgba(255,248,134,
     flex-direction: column;
 }
 >footer{
-    border: 1px solid red;
     flex-shrink: 0;
 }
 }

@@ -9,12 +9,12 @@ import { Forth } from "../components/welcome/Forth";
 import { Welcome } from "../views/Welcome";
 
 const routes: RouteRecordRaw[] = [
-  { path: "/", component: Foo },
-  { path: "/about", component: Bar },
+  { path: "/", redirect: "/welcome" },
   {
     path: "/welcome",
     component: Welcome,
     children: [
+      { path: "", redirect: "/welcome/1" },
       {
         path: "1",
         component: First,
