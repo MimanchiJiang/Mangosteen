@@ -16,33 +16,35 @@
         flex:1;
         display: flex;
         flex-direction: column;
-        >.span{
-            padding-top: 16px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bolder;
-        }
+       
     }
-    >.action{
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: var(--z-index-bottom-nav);
-        background-color: var(--welcome-bg-end);
-        color: var(--welcome-text);
-        font-size: 24px;
-        font-weight: bolder;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: var(--welcome-nav-height);
-        padding: 0 16px;
-        padding-bottom: var(--welcome-nav-gap);
-        >.fake{
-            visibility: hidden;
-        }
+   
+}
+.span{
+    padding-top: 16px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+}
+.action{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: var(--z-index-bottom-nav);
+    background-color: var(--welcome-bg-end);
+    color: var(--welcome-text);
+    font-size: 24px;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--welcome-nav-height);
+    padding: 0 16px;
+    padding-bottom: var(--welcome-nav-gap);
+    >.fake{
+        visibility: hidden;
+    }
 
-    }
 }
 
