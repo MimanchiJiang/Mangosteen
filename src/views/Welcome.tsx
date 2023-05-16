@@ -1,4 +1,4 @@
-import { defineComponent } from "vue";
+import { defineComponent, Transition } from "vue";
 import { RouterView } from "vue-router";
 import s from "./Welcome.module.scss";
 import logo from "../assets/logo.svg";
@@ -12,7 +12,13 @@ export const Welcome = defineComponent({
           <h1>波罗记账</h1>
         </header>
         <main class={s.main}>
-          <RouterView name="main"></RouterView>
+          <RouterView name="main">
+            {(obj: any) => (
+              <Transition name="slide-fade">
+                <obj.Component />
+              </Transition>
+            )}
+          </RouterView>
         </main>
         <footer>
           <RouterView name="foot"></RouterView>

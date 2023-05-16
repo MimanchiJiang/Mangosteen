@@ -17,6 +17,7 @@ background: linear-gradient(to top, var(--welcome-bg-end) 50%, var(--welcome-bg-
     }
 }
 >main{
+    position: relative;
     flex: 1;
     display: flex;
     flex-direction: column;
