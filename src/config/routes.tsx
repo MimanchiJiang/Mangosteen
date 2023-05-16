@@ -16,22 +16,27 @@ const routes: RouteRecordRaw[] = [
   {
     path: "/welcome",
     component: Welcome,
+
     children: [
       { path: "", redirect: "/welcome/1" },
       {
         path: "1",
+        name: "welcome1",
         components: { main: First, foot: FirstActions },
       },
       {
         path: "2",
+        name: "welcome2",
         components: { main: Second, foot: SecondActions },
       },
       {
         path: "3",
+        name: "welcome3",
         components: { main: Third, foot: ThirdActions },
       },
       {
         path: "4",
+        name: "welcome4",
         components: { main: Forth, foot: ForthActions },
       },
     ],

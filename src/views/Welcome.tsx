@@ -1,13 +1,41 @@
 import { defineComponent, ref, watchEffect, Transition, VNode } from "vue";
-import { RouterView, RouteLocationNormalizedLoaded } from "vue-router";
+import {
+  RouterView,
+  RouteLocationNormalizedLoaded,
+  useRoute,
+} from "vue-router";
 import { useSwipe } from "../hooks/useSwipe";
 import s from "./Welcome.module.scss";
+import { router } from "../config/routes";
+import { throttle } from "../shared/throttle";
+const pushMap: Record<string, string> = {
+  welcome1: "/welcome/2",
+  welcome2: "/welcome/3",
+  welcome3: "/welcome/4",
+  welcome4: "/start",
+};
+const pushMapReverse: Record<string, string> = {
+  welcome1: "/welcome/1",
+  welcome2: "/welcome/1",
+  welcome3: "/welcome/2",
+  welcome4: "/welcome/3",
+};
 export const Welcome = defineComponent({
   setup: (props, context) => {
     const main = ref<HTMLElement | undefined>();
-    const { direction, swiping } = useSwipe(main);
+    const { direction, swiping } = useSwipe(main, {
+      beforeStart: (e) => e.preventDefault(),
+    });
+    const route = useRoute();
+
+    const push = throttle(() => {
+      const name = (route.name || "welcome1").toString();
+      router.push(pushMap[name]);
+    }, 400);
     watchEffect(() => {
-      console.log(swiping.value, direction.value);
+      if (swiping.value && direction.value === "left") {
+        push();
+      }
     });
     return () => (
       <div class={s.wrapper}>
@@ -18,13 +46,6 @@ export const Welcome = defineComponent({
           <h1>波罗记账</h1>
         </header>
         <main class={s.main} ref={main}>
-          {/* <RouterView name="main">
-            {(obj: any) => (
-              <Transition name="slide-fade">
-                <obj.Component />
-              </Transition>
-            )}
-          </RouterView> */}
           <RouterView name="main">
             {({
               Component: X,
