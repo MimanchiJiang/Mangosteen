@@ -14,12 +14,7 @@ const pushMap: Record<string, string> = {
   welcome3: "/welcome/4",
   welcome4: "/start",
 };
-const pushMapReverse: Record<string, string> = {
-  welcome1: "/welcome/1",
-  welcome2: "/welcome/1",
-  welcome3: "/welcome/2",
-  welcome4: "/welcome/3",
-};
+
 export const Welcome = defineComponent({
   setup: (props, context) => {
     const main = ref<HTMLElement | undefined>();
