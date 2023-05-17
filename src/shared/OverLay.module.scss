@@ -1,0 +1,22 @@
+.overlay{
+ position: fixed;
+ z-index: calc(var(--z-index-overlay) + 1);
+ background-color: var(--overlay-bg);
+ top:var(--top-safe-area-height);
+ width: 16em;
+ height: calc(100% - var(--top-safe-area-height));
+}
+.icon{
+    height: 24px;
+    width: 24px;
+}
+
+.mask{
+position: fixed;
+z-index: var(--z-index-overlay);
+background-color: var(--overlay-mask-bg);
+top: var(--top-safe-area-height);
+width: 100%;
+height: calc(100% - var(--top-safe-area-height));
+
+}

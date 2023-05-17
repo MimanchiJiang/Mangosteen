@@ -7,7 +7,7 @@
     --welcome-nav-height:64px;
     --welcome-nav-gap:8px;
     --transition-duration:0.4s;
-    --button-bg-color:rgb(229,137,34);
+    --button-bg-color:rgb(247, 189, 123);
     --button-text-color:white;
     --button-font-size:18px;
     --button-radius:8px;
@@ -17,4 +17,8 @@
     --navbar-bg-start:var(--welcome-bg-start);
     --navbar-bg-end:var(--welcome-bg-end);
     --navbar-text:#8D8528FD;
+    --z-index-overlay:16;
+    --overlay-mask-bg:rgba(0,0,0,0.5);
+    --overlay-bg:white;
+    --top-safe-area-height:24px
 }
