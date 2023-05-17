@@ -1,0 +1,23 @@
+.navbar{
+    background: linear-gradient(to top, var(--navbar-bg-end) 50%, var(--navbar-bg-start) 100%);
+    color:var(--navbar-text);
+    fill:var(--navbar-text);
+    font-weight: bolder;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 40px 16px 12px;
+}
+.title{
+    font-size: 12px;
+}
+.icon_wrapper,.title_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >*{
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
