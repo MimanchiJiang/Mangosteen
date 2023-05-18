@@ -11,7 +11,8 @@ export type IconNames =
   | "menu"
   | "export"
   | "remind"
-  | "classify";
+  | "classify"
+  | "left";
 
 export const Icon = defineComponent({
   props: {
