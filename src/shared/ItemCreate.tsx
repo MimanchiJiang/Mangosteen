@@ -1,9 +1,11 @@
-import { defineComponent } from "vue";
+import { defineComponent, ref } from "vue";
 import s from "./ItemCreate.module.scss";
 import { MainLayout } from "../layouts/MainLayout";
 import { Icon } from "./Icon";
+import { Tab, Tabs } from "./Tabs";
 export const ItemCreate = defineComponent({
   setup: (props, context) => {
+    const kind = ref("支出");
     return () => (
       <MainLayout>
         {{
@@ -11,7 +13,13 @@ export const ItemCreate = defineComponent({
           icon: () => <Icon name="left" class={s.icon}></Icon>,
           default: () => (
             <>
-              <div>123</div>
+              <Tabs
+                selected={kind.value}
+                onUpdateSelected={(name: string) => (kind.value = name)}
+              >
+                <Tab name="支出">icon 列表</Tab>
+                <Tab name="收入">icon 列表2</Tab>
+              </Tabs>
             </>
           ),
         }}

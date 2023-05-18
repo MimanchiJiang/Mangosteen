@@ -1,0 +1,12 @@
+.selected{
+}
+
+.tabs{
+    &_nav{
+        >li{
+            &.selected{
+                background-color: red;
+            }
+        }
+    }
+}
