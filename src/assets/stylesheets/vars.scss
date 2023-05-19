@@ -1,6 +1,6 @@
 :root{
     --welcome-card-bg:white;
-    --welcome-text:#8D8528FD;
+    --welcome-text:hsla(55, 56%, 35%, 0.992);
     --z-index-bottom-nav:10;
     --welcome-bg-end:rgba(255,248,134,1);
     --welcome-bg-start:rgba(255,248,134,0.7);
@@ -23,4 +23,6 @@
     --top-safe-area-height:24px;
     --overlay-user-bg: #5C33BE;
     --overlay-user-text: white;
+    --tabs-indicator-bg:rgba(142, 134, 41, 0.5)
+
 }
