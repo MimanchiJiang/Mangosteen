@@ -13,10 +13,11 @@ export const ItemCreate = defineComponent({
           icon: () => <Icon name="left" class={s.icon}></Icon>,
           default: () => (
             <>
-              <Tabs
+              {/* <Tabs
                 selected={kind.value}
                 onUpdateSelected={(name: string) => (kind.value = name)}
-              >
+              > */}
+              <Tabs v-model:selected={kind.value}>
                 <Tab name="支出">icon 列表</Tab>
                 <Tab name="收入">icon 列表2</Tab>
               </Tabs>

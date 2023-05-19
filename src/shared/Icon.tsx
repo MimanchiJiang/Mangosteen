@@ -18,7 +18,6 @@ export const Icon = defineComponent({
   props: {
     name: {
       type: String as PropType<IconNames>,
-      required: true,
     },
     onClick: {
       type: Function as PropType<(e: MouseEvent) => void>,

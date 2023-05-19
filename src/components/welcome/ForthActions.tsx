@@ -8,9 +8,10 @@ export const ForthActions = () => (
     </RouterLink>
     <RouterLink class={s.next} to="/start">
       下一页
-    </RouterLink>{" "}
+    </RouterLink>
     <RouterLink class={s.next} to="/start">
       跳过
     </RouterLink>
   </div>
 );
+ForthActions.displayName = "ForthActions";

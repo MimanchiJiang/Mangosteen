@@ -6,11 +6,13 @@ import { Center } from "../shared/Center";
 import { Icon } from "../shared/Icon";
 import { OverLay } from "../shared/OverLay";
 import { RouterLink } from "vue-router";
+import { router } from "../config/routes";
+
 import { MainLayout } from "../layouts/MainLayout";
 export const StartPage = defineComponent({
   setup: (props, context) => {
     const overlayVisible = ref(false);
-
+    const pushCreate = () => {};
     const onClickMenu = () => {
       overlayVisible.value = !overlayVisible.value;
     };
@@ -24,12 +26,13 @@ export const StartPage = defineComponent({
               <Center class={s.pig_wrapper}>
                 <Icon name="pig" class={s.pig} />
               </Center>
-              <div class={s.button_wrapper}>
-                <RouterLink to="/items/create">
+              <RouterLink to={"/items/create"}>
+                <div class={s.button_wrapper}>
                   <Button class={s.button}>开始记账</Button>
-                </RouterLink>
-              </div>
-              <RouterLink to="/items/create">
+                </div>
+              </RouterLink>
+
+              <RouterLink to={"/items/create"}>
                 <FloatButton iconName="add"></FloatButton>
               </RouterLink>
 

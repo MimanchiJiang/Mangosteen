@@ -14,3 +14,4 @@ export const SecondActions = () => (
     </RouterLink>
   </div>
 );
+SecondActions.displayName = "SecondActions";

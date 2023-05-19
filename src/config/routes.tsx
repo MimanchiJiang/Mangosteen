@@ -16,21 +16,7 @@ import { ItemCreate } from "../shared/ItemCreate";
 
 const routes: RouteRecordRaw[] = [
   { path: "/", redirect: "/welcome" },
-  {
-    path: "/start",
-    component: StartPage,
-  },
-  {
-    path: "/items",
-    component: ItemsPage,
-    children: [
-      { path: "", component: ItemList },
-      {
-        path: "create",
-        component: ItemCreate,
-      },
-    ],
-  },
+
   {
     path: "/welcome",
     component: Welcome,
@@ -57,6 +43,18 @@ const routes: RouteRecordRaw[] = [
         name: "welcome4",
         components: { main: Forth, foot: ForthActions },
       },
+    ],
+  },
+  {
+    path: "/start",
+    component: StartPage,
+  },
+  {
+    path: "/items",
+    component: ItemsPage,
+    children: [
+      { path: "", component: ItemList },
+      { path: "create", component: ItemCreate },
     ],
   },
 ];
