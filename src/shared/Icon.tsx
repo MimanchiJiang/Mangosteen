@@ -12,7 +12,9 @@ export type IconNames =
   | "export"
   | "remind"
   | "classify"
-  | "left";
+  | "left"
+  | "notes"
+  | "date";
 
 export const Icon = defineComponent({
   props: {

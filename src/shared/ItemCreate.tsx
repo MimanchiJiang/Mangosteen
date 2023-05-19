@@ -3,6 +3,7 @@ import s from "./ItemCreate.module.scss";
 import { MainLayout } from "../layouts/MainLayout";
 import { Icon } from "./Icon";
 import { Tab, Tabs } from "./Tabs";
+import { InputPad } from "../components/item/InputPad";
 export const ItemCreate = defineComponent({
   setup: (props, context) => {
     const kind = ref("支出");
@@ -21,6 +22,9 @@ export const ItemCreate = defineComponent({
                 <Tab name="支出">icon 列表</Tab>
                 <Tab name="收入">icon 列表2</Tab>
               </Tabs>
+              <div class={s.inputPad_wrapper}>
+                <InputPad />
+              </div>
             </>
           ),
         }}

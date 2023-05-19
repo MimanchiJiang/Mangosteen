@@ -21,8 +21,9 @@
     --overlay-mask-bg:rgba(0,0,0,0.5);
     --overlay-bg:white;
     --top-safe-area-height:24px;
-    --overlay-user-bg: #5C33BE;
-    --overlay-user-text: white;
-    --tabs-indicator-bg:rgba(142, 134, 41, 0.5)
+    --overlay-user-bg: var(--welcome-bg-start);
+    --overlay-user-text: var(--welcome-text);
+    --tabs-indicator-bg:rgba(142, 134, 41, 0.5);
+    --button-border-color:#ddd
 
 }

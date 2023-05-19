@@ -1,5 +1,4 @@
-.selected{
-}
+
 
 .tabs{
     &_nav{
@@ -8,6 +7,7 @@ justify-content: space-between;
 align-items: center;
 text-align: center;
 color: var(--welcome-text);
+font-weight: 900;
         >li{
             flex: 1;
             flex-shrink: 0;
